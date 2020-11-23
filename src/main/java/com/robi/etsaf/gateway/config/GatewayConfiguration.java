@@ -37,19 +37,18 @@ public class GatewayConfiguration {
      * <p>
      * This uses Bucket4J to limit the API calls, see {@link com.robi.etsaf.gateway.gateway.ratelimiting.RateLimitingFilter}.
      */
-    @Configuration
-    @ConditionalOnProperty("jhipster.gateway.rate-limiting.enabled")
-    public static class RateLimitingConfiguration {
-
-        private final JHipsterProperties jHipsterProperties;
-
-        public RateLimitingConfiguration(JHipsterProperties jHipsterProperties) {
-            this.jHipsterProperties = jHipsterProperties;
-        }
-
-        @Bean
-        public RateLimitingFilter rateLimitingFilter() {
-            return new RateLimitingFilter(jHipsterProperties);
-        }
-    }
+	/*
+	 * @Configuration
+	 * 
+	 * @ConditionalOnProperty("jhipster.gateway.rate-limiting.enabled") public
+	 * static class RateLimitingConfiguration {
+	 * 
+	 * private final JHipsterProperties jHipsterProperties;
+	 * 
+	 * public RateLimitingConfiguration(JHipsterProperties jHipsterProperties) {
+	 * this.jHipsterProperties = jHipsterProperties; }
+	 * 
+	 * @Bean public RateLimitingFilter rateLimitingFilter() { return new
+	 * RateLimitingFilter(jHipsterProperties); } }
+	 */
 }

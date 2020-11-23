@@ -61,6 +61,7 @@ spring:
 
 server:
   port: 8081
+  host: api.qclocal.com
 
 # ===================================================================
 # JHipster specific properties

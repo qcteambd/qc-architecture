@@ -1,0 +1,24 @@
+version: '2'
+services:
+  traefik:
+    image: traefik:1.7.24
+    command: --web
+    ports:
+      - 80:80
+      - 443:443
+      - 28080:8080
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock  
+#    volumes:
+      - ./traefik/traefik.toml:/etc/traefik/traefik.toml
+      - ./traefik/certs/:/etc/certs/
+    command: >
+      --logLevel='DEBUG'
+      --api.dashboard=true
+      --InsecureSkipVerify=true
+      --defaultentrypoints='http,https'
+      --docker
+      --docker.exposedbydefault=true
+      --docker.watch=true
+      --docker.swarmmode=false
+      --docker.endpoint='unix:///var/run/docker.sock'

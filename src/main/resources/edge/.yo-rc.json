@@ -1,0 +1,11 @@
+{
+  "generator-jhipster": {
+    "appsFolders": ["secure-gateway"],
+    "directoryPath": "../",
+    "gatewayType": "traefik",
+    "monitoring": "no",
+    "consoleOptions": [],
+    "serviceDiscoveryType": "consul",
+    "jwtSecretKey": "MmMzZDM2MGQzNjczYTM4YzkwOTBjMDFjNzg3NTdhYTU1MTBhYTAwZTUyMTU4MTE2YTNiMTI4NTM3YzUxZmNjODY0YmNiNTE2ZmU1ZGQ5ZDY2ODhkMmNhM2QyM2Q2YWJmYzMwNQ=="
+  }
+}

@@ -1,0 +1,30 @@
+[entryPoints.http]
+  address = ":80"
+#    [entryPoints.http.redirect]
+#    entryPoint = "https"
+#  [entryPoints.https]
+#  address = ":443"
+#    [entryPoints.https.tls]
+#      [[entryPoints.https.tls.certificates]]
+#      certFile = "/etc/certs/server.crt"
+#      keyFile = "/etc/certs/server.key"
+  
+[consulCatalog]
+endpoint = "consul:8500"
+exposedByDefault = true
+prefix = "traefik"
+# frontEndRule = "PathPrefixStrip: /{{.ServiceName}}"
+frontEndRule = "Host:api.qclocal.com"
+# [file]
+
+# [backends]
+#  [backends.gateway]
+#    [backends.gateway.servers.server1]
+#       url= "http://localhost:8081"
+# [frontends]
+#  [frontends.frontend1]
+#    backend= "gateway"
+#    passHostHeader = true
+#    [frontends.frontend1.routes.route_1]
+#    rule = "Host:api.qclocal.com"
+
